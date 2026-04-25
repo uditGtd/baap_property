@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Property Baap – The BAAP of All Property Deals</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+
+    <!-- Top Row: Logo | Tagline | CTA + Hamburger -->
+    <div class="navbar-top">
+      <div class="nav-top-container">
+
+        <a href="#" class="nav-logo">
+          <div class="logo-wrapper">
+            <img src="assets/logo-2.png" alt="Property Baap Logo" class="logo-img" id="logoImg" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex'"/>
+            <div class="logo-fallback" id="logoFallback">
+              <span class="logo-crown">♛</span>
+              <span class="logo-text-brand">B</span>
+            </div>
+          </div>
+        </a>
+
+        <span class="navbar-tagline">Property Verification & Due Diligence</span>
+
+        <div class="nav-top-right">
+          <a href="#" class="btn-consultation" id="consultBtn">BOOK CONSULTATION</a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Row: Nav Links -->
+    <div class="navbar-bottom">
+      <div class="nav-bottom-container">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              GLOBAL SEARCH
+              <small>110024.com, etc.</small>
+              <span class="arrow">&#x25BE;</span>
+            </a>
+            <div class="dropdown">
+              <a href="https://www.110024.com" target="_blank" rel="noopener noreferrer">110024.com (Lajpat Nagar)</a>
+              <a href="https://www.110021.com" target="_blank" rel="noopener noreferrer">110021.com (Chanakyapuri)</a>
+              <a href="https://www.110048.com" target="_blank" rel="noopener noreferrer">110048.com (GK)</a>
+              <a href="https://www.110049.com" target="_blank" rel="noopener noreferrer">110049.com (AIIMS)</a>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              LEGAL &amp; TITLE
+              <small>TitleWala, SaleDeed, NOC</small>
+              <span class="arrow">&#x25BE;</span>
+            </a>
+            <div class="dropdown">
+              <a href="https://www.titlewala.com" target="_blank" rel="noopener noreferrer">TitleWala.com</a>
+              <a href="https://www.saledeed.com" target="_blank" rel="noopener noreferrer">SaleDeed.com</a>
+              <a href="https://www.mutationwala.com" target="_blank" rel="noopener noreferrer">MutationWala.com</a>
+              <a href="https://www.noobjectioncertificate.com" target="_blank" rel="noopener noreferrer">NOC.com</a>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              DIRECT TRANSACTIONS
+              <small>Bina Dalal Approved</small>
+              <span class="arrow">&#x25BE;</span>
+            </a>
+            <div class="dropdown">
+              <a href="https://www.binadlal.com" target="_blank" rel="noopener noreferrer">Bina Dalal Certified</a>
+              <a href="https://www.binadlal.com/owner-direct" target="_blank" rel="noopener noreferrer">Property Owner Direct</a>
+              <a href="https://www.binadlal.com/builder-direct" target="_blank" rel="noopener noreferrer">Builder Direct</a>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              CONSULT THE BAAP
+              <span class="arrow">&#x25BE;</span>
+            </a>
+            <div class="dropdown">
+              <a href="https://maps.google.com/?q=Lajpat+Nagar+New+Delhi" target="_blank" rel="noopener noreferrer">H.Q. Address</a>
+              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+              <a href="https://www.titlewala.com/consult" target="_blank" rel="noopener noreferrer">Consult an Expert</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-title" data-target="mob1">GLOBAL SEARCH <span class="m-arrow">+</span></div>
+        <div class="mobile-nav-sub" id="mob1">
+          <a href="https://www.110024.com" target="_blank" rel="noopener noreferrer">110024.com (Lajpat Nagar)</a>
+          <a href="https://www.110021.com" target="_blank" rel="noopener noreferrer">110021.com (Chanakyapuri)</a>
+          <a href="https://www.110048.com" target="_blank" rel="noopener noreferrer">110048.com (GK)</a>
+          <a href="https://www.110049.com" target="_blank" rel="noopener noreferrer">110049.com (AIIMS)</a>
+        </div>
+      </div>
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-title" data-target="mob2">LEGAL &amp; TITLE <span class="m-arrow">+</span></div>
+        <div class="mobile-nav-sub" id="mob2">
+          <a href="https://www.titlewala.com" target="_blank" rel="noopener noreferrer">TitleWala.com</a>
+          <a href="https://www.saledeed.com" target="_blank" rel="noopener noreferrer">SaleDeed.com</a>
+          <a href="https://www.mutationwala.com" target="_blank" rel="noopener noreferrer">MutationWala.com</a>
+          <a href="https://www.noobjectioncertificate.com" target="_blank" rel="noopener noreferrer">NOC.com</a>
+        </div>
+      </div>
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-title" data-target="mob3">DIRECT TRANSACTIONS <span class="m-arrow">+</span></div>
+        <div class="mobile-nav-sub" id="mob3">
+          <a href="https://www.binadlal.com" target="_blank" rel="noopener noreferrer">Bina Dalal Certified</a>
+          <a href="https://www.binadlal.com/owner-direct" target="_blank" rel="noopener noreferrer">Property Owner Direct</a>
+          <a href="https://www.binadlal.com/builder-direct" target="_blank" rel="noopener noreferrer">Builder Direct</a>
+        </div>
+      </div>
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-title" data-target="mob4">CONSULT THE BAAP <span class="m-arrow">+</span></div>
+        <div class="mobile-nav-sub" id="mob4">
+          <a href="https://maps.google.com/?q=Lajpat+Nagar+New+Delhi" target="_blank" rel="noopener noreferrer">H.Q. Address</a>
+          <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+          <a href="https://www.titlewala.com/consult" target="_blank" rel="noopener noreferrer">Consult an Expert</a>
+        </div>
+      </div>
+      <a href="#" class="btn-consultation mobile-cta">BOOK CONSULTATION</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <!-- <p class="hero-tagline" data-animate>Property Deal Starts Here</p> -->
+      <h1 class="hero-title" data-animate>
+        THE <span class="gold-text">BAAP</span> OF ALL PROPERTY DEALS
+      </h1>
+      <p class="hero-sub" data-animate>A parent brand unifying India's ultimate real estate service ecosystem.</p>
+      <a href="#services" class="btn-explore" data-animate>EXPLORE OUR SERVICES</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span></span>
+      <p>Scroll</p>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE CARDS ===== -->
+  <section class="services" id="services">
+    <div class="services-container">
+
+      <div class="service-card" data-delay="0">
+        <div class="card-icon-wrap">
+          <svg class="card-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pin body -->
+            <path d="M30 6C20.611 6 13 13.611 13 23c0 6.177 3.32 11.572 8.25 14.6L30 54l8.75-16.4C43.68 34.572 47 29.177 47 23 47 13.611 39.389 6 30 6z"
+              stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.12"/>
+            <!-- Inner ring -->
+            <circle cx="30" cy="23" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <!-- Center dot -->
+            <circle cx="30" cy="23" r="2.5" fill="currentColor"/>
+            <!-- Signal arcs -->
+            <path d="M20 11.5C23 8.8 26.3 7.2 30 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+            <path d="M17.5 15C18.8 13 20.3 11.4 22 10.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>
+          </svg>
+        </div>
+        <h3 class="card-title">HYPER-LOCAL NETWORK<br/><span>(110024.com)</span></h3>
+        <p class="card-desc">Direct Property Owner listings in premier South Delhi locations.</p>
+        <a href="https://www.110024.com" target="_blank" rel="noopener noreferrer" class="card-link">Explore →</a>
+      </div>
+
+      <div class="service-card featured" data-delay="150">
+        <div class="card-icon-wrap">
+          <svg class="card-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="30" cy="30" r="14" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="22" y="34" font-size="11" fill="currentColor" font-family="serif" font-weight="bold">TW</text>
+          </svg>
+        </div>
+        <h3 class="card-title">LEGAL TECH<br/><span>(TitleWala.com)</span></h3>
+        <p class="card-desc">Expert Title Search, Sale Deed, Mutation, and NOC (noobjectioncertificate.com) support.</p>
+        <a href="https://www.titlewala.com" target="_blank" rel="noopener noreferrer" class="card-link">Explore →</a>
+      </div>
+
+      <div class="service-card" data-delay="300">
+        <div class="card-icon-wrap">
+          <svg class="card-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M20 30c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 36l16-12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="38" cy="24" r="3" fill="currentColor"/>
+            <circle cx="22" cy="36" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="card-title">BINA DALAL<br/><span>ECOSYSTEM</span></h3>
+        <p class="card-desc">Guaranteed direct-to-owner deals. No broker interference.</p>
+        <a href="https://www.binadlal.com" target="_blank" rel="noopener noreferrer" class="card-link">Explore →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ALL PLATFORMS ===== -->
+  <section class="platforms" id="platforms">
+    <div class="platforms-container">
+
+      <div class="section-header">
+        <p class="section-label">COMPLETE ECOSYSTEM</p>
+        <h2 class="section-title">ALL OUR <span class="gold-text">PLATFORMS</span></h2>
+        <p class="section-sub">From hyper-local listings to legal closure — every service under one roof.</p>
+      </div>
+
+      <div class="platforms-grid">
+
+        <a href="https://www.110024.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 3C12.477 3 8 7.477 8 13c0 5.25 10 20 10 20s10-14.75 10-20c0-5.523-4.477-10-10-10z" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.1"/>
+              <circle cx="18" cy="13" r="4" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">HYPER-LOCAL</span>
+            <h3>110024.com</h3>
+            <p>Direct owner listings in Lajpat Nagar & South Delhi pin codes.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.titlewala.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="4" width="20" height="26" rx="2" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.08"/>
+              <path d="M10 10h12M10 14h12M10 18h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="25" cy="27" r="5" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M23 27l1.5 1.5L27 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">LEGAL TECH</span>
+            <h3>TitleWala.com</h3>
+            <p>Expert property title search, verification & legal due diligence.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.saledeed.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="4" width="20" height="26" rx="2" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.08"/>
+              <path d="M10 10h12M10 14h12M10 18h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M20 24l3-3 3 3M23 21v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">DOCUMENTATION</span>
+            <h3>SaleDeed.com</h3>
+            <p>Sale deed drafting, review & registration assistance.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.mutationwala.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 18h20M22 12l6 6-6 6M14 12l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">MUTATION</span>
+            <h3>MutationWala.com</h3>
+            <p>Seamless property mutation & ownership transfer services.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.noobjectioncertificate.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="5" width="26" height="26" rx="3" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.08"/>
+              <path d="M12 18l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">CERTIFICATE</span>
+            <h3>NOC Services</h3>
+            <p>No Objection Certificate procurement for properties & builders.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.binadlal.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 24c0-4.418 4.477-8 10-8s10 3.582 10 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="18" cy="12" r="5" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.1"/>
+              <path d="M4 28h28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">DIRECT DEALS</span>
+            <h3>Bina Dalal</h3>
+            <p>Certified broker-free transactions — owner to buyer, guaranteed.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.110021.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 28L18 8l13 20H5z" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.08"/>
+              <path d="M14 28v-6h4v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 20h16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">SOUTH DELHI</span>
+            <h3>110021.com</h3>
+            <p>Premium properties in Chanakyapuri — diplomatic & elite zone.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.110048.com" target="_blank" rel="noopener noreferrer" class="platform-box">
+          <div class="platform-icon">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="14" width="28" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.08"/>
+              <path d="M10 14V10a8 8 0 0 1 16 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="18" cy="23" r="3" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="platform-content">
+            <span class="platform-tag">SOUTH DELHI</span>
+            <h3>110048.com</h3>
+            <p>Exclusive listings in Greater Kailash — GK I & GK II.</p>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <!-- Col 1: Parent Brand -->
+        <div class="footer-col footer-col-brand">
+          <img src="assets/logo-1.jpeg" alt="Property Baap" class="footer-brand-logo" />
+          <div class="footer-col-links">
+            <h4>PARENT BRAND</h4>
+            <a href="https://www.31son.com" target="_blank" rel="noopener noreferrer">31son Pvt. Ltd.</a>
+            <a href="https://www.31son.com/philosophy" target="_blank" rel="noopener noreferrer">Our Philosophy</a>
+            <a href="https://www.31son.com/careers" target="_blank" rel="noopener noreferrer">Careers</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Legal & Title -->
+        <div class="footer-col">
+          <h4>LEGAL &amp; TITLE</h4>
+          <a href="https://www.titlewala.com" target="_blank" rel="noopener noreferrer">TitleWala.com</a>
+          <a href="https://www.saledeed.com" target="_blank" rel="noopener noreferrer">SaleDeed.com</a>
+          <a href="https://www.mutationwala.com" target="_blank" rel="noopener noreferrer">MutationWala.com</a>
+          <a href="https://www.noobjectioncertificate.com" target="_blank" rel="noopener noreferrer">NOC.com</a>
+        </div>
+
+        <!-- Col 3: South Delhi Network -->
+        <div class="footer-col">
+          <h4>SOUTH DELHI NETWORK</h4>
+          <a href="https://www.110024.com" target="_blank" rel="noopener noreferrer">110024.com (Lajpat Nagar)</a>
+          <a href="https://www.110021.com" target="_blank" rel="noopener noreferrer">110021.com (Chanakyapuri)</a>
+          <a href="https://www.110048.com" target="_blank" rel="noopener noreferrer">110048.com (GK)</a>
+          <a href="https://www.110049.com" target="_blank" rel="noopener noreferrer">110049.com (AIIMS)</a>
+        </div>
+
+        <!-- Col 4: Specialized Services -->
+        <div class="footer-col">
+          <h4>SPECIALIZED SERVICES</h4>
+          <a href="https://www.binadlal.com" target="_blank" rel="noopener noreferrer">Bina Dalal Certified</a>
+          <a href="https://www.binadlal.com/owner-direct" target="_blank" rel="noopener noreferrer">Property Owner Direct</a>
+          <a href="https://www.binadlal.com/builder-direct" target="_blank" rel="noopener noreferrer">Builder Direct</a>
+        </div>
+
+        <!-- Col 5: Connect -->
+        <div class="footer-col">
+          <h4>CONNECT</h4>
+          <a href="https://maps.google.com/?q=Lajpat+Nagar+New+Delhi" target="_blank" rel="noopener noreferrer">H.Q. Address</a>
+          <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+          <a href="https://www.titlewala.com/consult" target="_blank" rel="noopener noreferrer">Consult an Expert</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 31son Pvt. Ltd. | All Rights Reserved. Property Baap™ and the Crown Device are registered trademarks.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
