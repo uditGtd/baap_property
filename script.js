@@ -144,6 +144,113 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ── Language Switcher ── */
+  const languages = [
+    { code: 'en',    flag: '🇬🇧', name: 'English'                },
+    { code: 'hi',    flag: '🇮🇳', name: 'Hindi - हिन्दी'          },
+    { code: 'ar',    flag: '🇸🇦', name: 'Arabic - العربية'        },
+    { code: 'zh-CN', flag: '🇨🇳', name: 'Chinese - 中文'           },
+    { code: 'fr',    flag: '🇫🇷', name: 'French - Français'       },
+    { code: 'de',    flag: '🇩🇪', name: 'German - Deutsch'        },
+    { code: 'es',    flag: '🇪🇸', name: 'Spanish - Español'       },
+    { code: 'ja',    flag: '🇯🇵', name: 'Japanese - 日本語'        },
+    { code: 'ko',    flag: '🇰🇷', name: 'Korean - 한국어'          },
+    { code: 'ru',    flag: '🇷🇺', name: 'Russian - Русский'       },
+    { code: 'pt',    flag: '🇵🇹', name: 'Portuguese - Português'  },
+    { code: 'it',    flag: '🇮🇹', name: 'Italian - Italiano'      },
+    { code: 'nl',    flag: '🇳🇱', name: 'Dutch - Nederlands'      },
+    { code: 'tr',    flag: '🇹🇷', name: 'Turkish - Türkçe'        },
+    { code: 'ur',    flag: '🇵🇰', name: 'Urdu - اردو'             },
+    { code: 'bn',    flag: '🇧🇩', name: 'Bengali - বাংলা'         },
+    { code: 'ta',    flag: '🇮🇳', name: 'Tamil - தமிழ்'           },
+    { code: 'te',    flag: '🇮🇳', name: 'Telugu - తెలుగు'         },
+    { code: 'mr',    flag: '🇮🇳', name: 'Marathi - मराठी'         },
+    { code: 'gu',    flag: '🇮🇳', name: 'Gujarati - ગુજરાતી'      },
+    { code: 'pa',    flag: '🇮🇳', name: 'Punjabi - ਪੰਜਾਬੀ'        },
+    { code: 'ml',    flag: '🇮🇳', name: 'Malayalam - മലയാളം'      },
+    { code: 'kn',    flag: '🇮🇳', name: 'Kannada - ಕನ್ನಡ'         },
+    { code: 'id',    flag: '🇮🇩', name: 'Indonesian - Indonesia'  },
+    { code: 'th',    flag: '🇹🇭', name: 'Thai - ไทย'              },
+  ];
+
+  const langSwitcher = document.getElementById('langSwitcher');
+  const langBtn      = document.getElementById('langBtn');
+  const langSearch   = document.getElementById('langSearch');
+  const langListEl   = document.getElementById('langList');
+  const langLabel    = document.getElementById('langLabel');
+
+  function buildLangList(filter) {
+    filter = filter || '';
+    langListEl.innerHTML = '';
+    languages
+      .filter(l => l.name.toLowerCase().includes(filter.toLowerCase()))
+      .forEach(l => {
+        const li = document.createElement('li');
+        li.dataset.code = l.code;
+        li.innerHTML = '<span>' + l.flag + '</span><span>' + l.name + '</span>';
+        li.addEventListener('click', function() {
+          const select = document.querySelector('.goog-te-combo');
+          if (select) {
+            select.value = l.code;
+            select.dispatchEvent(new Event('change'));
+          }
+          langLabel.textContent = l.code.split('-')[0].toUpperCase();
+          document.querySelectorAll('.lang-list li').forEach(function(i) { i.classList.remove('active'); });
+          li.classList.add('active');
+          langSwitcher.classList.remove('open');
+          langSearch.value = '';
+          buildLangList();
+        });
+        langListEl.appendChild(li);
+      });
+  }
+
+  buildLangList();
+
+  langBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    langSwitcher.classList.toggle('open');
+    if (langSwitcher.classList.contains('open')) langSearch.focus();
+  });
+
+  langSearch.addEventListener('input', function() { buildLangList(langSearch.value); });
+
+  document.addEventListener('click', function(e) {
+    if (!langSwitcher.contains(e.target)) langSwitcher.classList.remove('open');
+  });
+
+  /* ── Hero Service Swiper ── */
+  new Swiper('.hero-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 14,
+    centeredSlides: true,
+    loop: true,
+    speed: 650,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+  });
+
+  /* ── Hero Image Slider ── */
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+
+  function advanceSlide() {
+    heroSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % heroSlides.length;
+    const next = heroSlides[currentSlide];
+    next.style.animation = 'none';
+    void next.offsetWidth; // force reflow to restart Ken Burns
+    next.style.animation = '';
+    next.classList.add('active');
+  }
+
+  if (heroSlides.length > 1) {
+    setInterval(advanceSlide, 6000);
+  }
+
   /* ── Subtle navbar logo pulse on page load ── */
   const logoWrapper = document.querySelector('.logo-wrapper');
   if (logoWrapper) {
