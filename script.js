@@ -219,7 +219,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!langSwitcher.contains(e.target)) langSwitcher.classList.remove('open');
   });
 
-  /* ── Hero Service Swiper ── */
+    /* ── Services Swiper ── */
+  new Swiper('.services-swiper', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 24,
+    loop: false,
+    navigation: {
+      nextEl: '.services-next',
+      prevEl: '.services-prev',
+    },
+    pagination: {
+      el: '.services-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 24,
+      },
+    },
+  });
+
+/* ── Hero Service Swiper ── */
   new Swiper('.hero-swiper', {
     slidesPerView: 'auto',
     spaceBetween: 14,
