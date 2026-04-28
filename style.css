@@ -710,6 +710,10 @@ body { top: 0 !important; }
   position: relative;
   overflow: hidden;
   transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .feature-box::before {
@@ -803,47 +807,12 @@ body { top: 0 !important; }
   background: linear-gradient(180deg, #0a0a0a 0%, #0e0c06 50%, #0a0a0a 100%);
 }
 
-.services-swiper-wrap {
+.services-grid {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
-  position: relative;
-}
-
-.services-swiper {
-  width: 100%;
-  padding-bottom: 3rem !important;
-}
-
-.services-swiper .swiper-slide {
-  height: auto;
-}
-
-.services-swiper .swiper-slide .service-card {
-  height: 100%;
-  opacity: 1;
-  transform: none;
-}
-
-/* Nav arrows */
-.services-prev,
-.services-next {
-  color: var(--gold) !important;
-}
-
-.services-prev::after,
-.services-next::after {
-  font-size: 1.2rem !important;
-}
-
-/* Pagination dots */
-.services-pagination .swiper-pagination-bullet {
-  background: rgba(201,168,76,0.4);
-  opacity: 1;
-}
-
-.services-pagination .swiper-pagination-bullet-active {
-  background: var(--gold);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .service-card {
@@ -1199,11 +1168,15 @@ body { top: 0 !important; }
 /* ===========================
    RESPONSIVE
    =========================== */
+@media (max-width: 1023px) and (min-width: 601px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
   :root { --nav-h: 70px; --nav-top-h: 70px; }
   .logo-wrapper { width: 54px; height: 54px; }
   .logo-fallback { width: 54px; height: 54px; }
-  .services-container { grid-template-columns: 1fr; max-width: 440px; }
+  .services-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
   .btn-explore {
     padding: 0.7rem 1.4rem;
     font-size: 0.8rem;
